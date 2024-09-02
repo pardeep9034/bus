@@ -13,10 +13,11 @@
       <div class="heading">
         <h1>Find Your Perfect Route!</h1>
       </div>
-      <div class="container">
-        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+      
+      <div class="container ">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1  d-flex justify-content-center">
           <% for (route of allRoutes) { %>
-          <div class="card m-3" style="width: 18rem; height: 20rem;">
+          <div class="card m-3 " style="width: 18rem; height: 20rem;">
             <div class="card-body">
               <h5 class="card-title"><%= route.route_name %></h5>
               <p class="card-text"><%= route.bus_number %></p>

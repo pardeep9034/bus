@@ -1,122 +1,236 @@
-*{
-    font-family: 'Poppins', sans-serif;
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
 }
-body{
-    background-image: url(./back2.jpg);
+body {
+  background-image: url(./back2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+
+.navbar {
+  padding-top: 1rem;
+  position: sticky;
+  top: 0;
+  color: rgb(235, 211, 248);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.buttons {
+  display: flex;
+
+  margin-right: 1rem;
+}
+.btn {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5px;
+  height: 2.5rem;
+  width: 7rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+}
+.signup {
+  background-color: transparent;
+  border: 2px solid rgb(235, 211, 248);
+  color: rgb(235, 211, 248);
+}
+.signup a {
+  text-decoration: none;
+  color: rgb(235, 211, 248);
+}
+.login {
+  background-color: rgb(46, 7, 63);
+  border: 2px solid rgb(46, 7, 63);
+}
+.login a {
+  text-decoration: none;
+  color: rgb(235, 211, 248);
+}
+.login:hover {
+  background-color: rgb(235, 211, 248);
+  a {
+    color: rgb(46, 7, 63);
+  }
+}
+.header {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  width: 40%;
+  text-align: center;
+  color: rgb(46, 7, 63);
+  margin-top: 2.2rem;
+  margin-bottom: 5rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: rgb(235, 211, 248);
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  background-color: #6a0dad;
+  color: white;
+  border: 2px solid #6a0dad;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(46, 7, 63);
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navbar {
+    font-size: 1.8rem;
+    height: 4rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    height: 2rem;
+    width: 6rem;
+  }
+  .header {
+    margin-top: 5rem;
+  }
+  .header h1 {
+    font-size: 3rem;
+    width: 60%;
+  }
+  .header p {
+    font-size: 1.2rem;
+  }
+  button {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar {
+    font-size: 2.2rem;
+    height: 4.1rem;
+  }
+  .btn {
+    font-size: 1.3rem;
+    height: 2.1rem;
+    width: 6.2rem;
+  }
+  .header {
+    margin-top: 5rem;
+  }
+  .header h1 {
+    font-size: 3.7rem;
+
+    width: 60%;
+  }
+  .header p {
+    font-size: 1.3rem;
+  }
+  button {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar {
+    font-size: 2.5rem;
+    height: 4.5rem;
+  }
+
+  .header {
+    margin-top: 3rem;
+  }
+  .header h1 {
+    font-size: 4rem;
+    width: 60%;
+  }
+  .header p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    font-size: 3rem;
+    font-weight: 800;
+    height: 6rem;
+  }
+  .btn {
+    font-size: 1.5rem;
+
+    height: 3rem;
+    width: 8rem;
+  }
+  .header h1 {
+    font-size: 4.8rem;
+    font-weight: 800;
+    width: 50%;
+  }
+  .header p {
+    font-size: 2rem;
+  }
+  button {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 100vh;
-    
-}
-
-.navbar{
-    /* background-color: rgb(241, 218, 218) !important; */
-    
-    padding-top: 1rem;
-    position: sticky;
-    top: 0;
-    color: rgb(235, 211, 248);
+  }
+  .navbar {
+    font-size: 1.5rem;
     height: 4rem;
+  }
+  .buttons {
     display: flex;
-    align-items: center;
-    font-weight: 700;
-    font-size: 2.2rem;
-}
-.buttons{
-    display: flex;
-   
-    
     margin-right: 1rem;
-}
-.btn{
-    /* background-color: rgb(241, 218, 218); */
-    
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: .5px;
-    height: 2.5rem;
-    width: 7rem;
-    margin-left: 1rem;
-    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    font-size: 1rem;
+    height: 1.5rem;
+    width: 5rem;
+  }
+  .header {
+    margin-top: 5rem;
+  }
 
-  
-}
-.signup{
-
-    background-color: transparent;
-   border: 2px solid rgb(235, 211, 248);
-   color: rgb(235, 211, 248);
-}
-.signup a{
-    text-decoration: none;
-    color: rgb(235, 211, 248);
-}
-.login{
-    background-color: rgb(46, 7, 63);
-    border: 2px solid rgb(46, 7, 63);
-    
-    
-}
-.login a{
-    text-decoration: none;
-    color: rgb(235, 211, 248);
-    
-}
-.login:hover{
-    background-color: rgb(235, 211, 248);
-    a{
-        color: rgb(46, 7, 63);
-    }
-    /* color: rgb(46, 7, 63); */
-}
-.header {
-   
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-   
-}
-
-.header h1 {
-
-    font-size: 4rem;
-    font-weight: bold;
-    width: 40%;
+  .header h1 {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+  .header p {
     text-align: center;
-    color: rgb(46, 7, 63);
-    margin-top: 2.2rem;
-    margin-bottom: 5rem;
-}
-
-.header p {
-    font-size: 1.5rem;
-    color: rgb(235, 211, 248);
-    margin-bottom: 2rem;
-}
-
-button {
+    font-size: 1rem;
+    width: 80%;
+  }
+  button {
     padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    font-weight: 700;
-    background-color: #6a0dad;
-    color: white;
-    border: 2px solid #6a0dad;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-button:hover {
-
-    background-color: rgb(46, 7, 63);
-
+    font-size: 1.2rem;
+  }
 }

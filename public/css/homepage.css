@@ -1,19 +1,11 @@
 body {
-    
-    height: 100vh !important;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(122, 28, 172, 0.5)  !important; /* Purple overlay */
-    text-transform: capitalize;
-    font-family: 'Poppins', sans-serif !important;
-    
-
+  height: 100vh !important;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(122, 28, 172, 0.5) !important; /* Purple overlay */
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif !important;
 }
-
-
-
-
-
 
 .navbar {
   font-family: "popins", sans-serif;
@@ -43,7 +35,6 @@ body {
   padding: 0px 10px !important;
   margin-left: 5px !important;
   background-color: rgb(235, 211, 248) !important;
-  
 
   border-radius: 20px !important;
 
@@ -51,73 +42,67 @@ body {
   border: 2px solid rgb(235, 211, 248) !important;
 }
 .btn a {
-    text-decoration: none !important;
-    color: #7a1cac !important;
-    font-weight: 600 !important;
-  }
+  text-decoration: none !important;
+  color: #7a1cac !important;
+  font-weight: 600 !important;
+}
 .btn:hover {
   background-color: transparent !important;
-  a{
+  a {
     color: rgb(235, 211, 248) !important;
   }
-  
-  
 }
 .box {
-    display: grid;
-    grid-template-columns: 1fr 1fr !important;
-   
-    padding: 30px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr !important;
+
+  padding: 30px 30px;
+  height: 100vh;
 }
 
-
-.box-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0px !important;
-   
-} 
+.box-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px !important;
+}
 
 .box-image img {
-    width: 65% !important;
-    height: auto !important;
-    border-radius: 30px;
-    margin-left: 40px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease;
+  width: 65% !important;
+  height: auto !important;
+  border-radius: 30px;
+  margin-left: 40px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
 }
 
 .box-image img:hover {
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
 }
-.box-title{
-    padding-top: 30px   !important;
-    padding-left: 30px !important;
+.box-title {
+  padding-top: 60px !important;
+  padding-left: 30px !important;
 }
 .box-title h1 {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 3.3rem !important;
-    font-weight: 700 !important;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    
+  font-family: "Poppins", sans-serif !important;
+  font-size: 3.3rem !important;
+  font-weight: 700 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-.letsgo{
-    margin-top: 40px;
-    padding: 0px 30px  !important;
-    font-size: 1.8rem !important;
-    
+.letsgo {
+  margin-top: 40px;
+  padding: 0px 30px !important;
+  font-size: 1.8rem !important;
 }
 
 .container {
-  
   display: grid;
-  grid-template-areas: 
-    'welcome welcome bus-pass'
-    'details details bus-pass'
-    ' not not not' ;
+  grid-template-areas:
+    "welcome welcome bus-pass"
+    "details details bus-pass"
+    " not not not";
   padding: 30px 30px;
-  /* margin-top: 10px; */
+
   grid-gap: 20px; /* Adds space between grid items */
 }
 
@@ -132,60 +117,171 @@ body {
 .welcome h1 {
   font-size: 2.5rem !important;
   font-weight: 800 !important;
- 
 }
 
 .details {
   grid-area: details;
   background-color: rgb(235, 244, 246);
-  color:rgba(0, 0, 0, );
-  
+  color: rgba(0, 0, 0);
 }
-.route{
+.route {
   background-color: rgb(238, 238, 238);
 }
-.route h2{
-  
+.route h2 {
   font-size: 2.5rem !important;
   font-weight: 600 !important;
   padding: 10px 0px !important;
   margin-left: 30px !important;
   word-spacing: 20px !important;
-  
 }
-.route-details{
-  
-  
+.route-details {
   padding: 20px 30px !important;
   font-size: 1.5rem !important;
   font-weight: 700 !important;
   color: rgb(220, 95, 0) !important;
-  
 }
-.route-details strong{
+.route-details strong {
   color: rgb(7, 25, 82) !important;
 }
 
-
-.notification{
+.notification {
   grid-area: not !important;
 }
 
-@media (max-width: 768px) {
-  .container {
-      grid-template-areas: 
-        'welcome'
-        'details'
-        'bus-pass';
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 2.2rem !important;
+  }
+  .navbar-nav {
+    background-color: black;
+  }
+  .nav-box {
+    width: 100% !important;
+  }
+
+  .navbar-toggler-icon {
+    margin-left: 5rem !important;
+  }
+  .navbar-toggler-icon ::after {
+    background-color: white !important;
+  }
+
+  .navbar-nav a {
+    font-size: 1rem !important;
+  }
+  .box-title h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .box {
+    grid-template-columns: 1fr !important;
+  }
+  .box-image {
+    display: none;
+  }
+  .box-title {
+    padding-left: 0px !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 799px) {
+  .navbar {
+    font-size: 3.2rem !important;
+    height: 5rem !important;
+  }
+  .navbar-brand {
+    font-size: 2.6rem !important;
+  }
+  .navbar-nav a {
+    margin-left: 4px;
+  }
+  .navbar-nav .btn {
+    padding: 0px !important;
+    margin-left: 0px !important;
+
+    font-size: 1rem !important;
+  }
+  .box-title {
+    padding-top: 0% !important;
+    width: 100% !important;
+  }
+
+  .box-title h1 {
+    font-size: 2.1rem !important;
+  }
+  .box {
+    justify-items: center;
+    align-items: center;
+  }
+  .letsgo {
+    text-align: center;
+    font-size: 1.4rem !important;
+  }
+}
+@media (min-width: 800px) and (max-width: 991.98px) {
+  .navbar {
+    font-size: 3.2rem !important;
+    height: 5rem !important;
+  }
+  .navbar-brand {
+    font-size: 2.6rem !important;
+  }
+  .navbar-nav .btn {
+    padding: 0px !important;
+    margin-left: 0px !important;
+    width: 100px !important;
+
+    font-size: 1rem !important;
+  }
+  .box-title h1 {
+    font-size: 2.6rem !important;
+  }
+  .box {
+    justify-items: center;
+    align-items: center;
+  }
+  .letsgo {
+    text-align: center;
+    font-size: 1.5rem !important;
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar {
+    font-size: 3.2rem !important;
+    height: 5rem !important;
+  }
+  .navbar-brand {
+    font-size: 2.6rem !important;
+  }
+  .navbar-nav .btn {
+    padding: 0px !important;
+    margin-left: 0px !important;
+    width: 100px !important;
 
+    font-size: 1rem !important;
+  }
+  .box-title h1 {
+    font-size: 2.6rem !important;
+  }
 
-
-
-
-
-
-
-
+  .letsgo {
+    text-align: center;
+    font-size: 1.5rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar {
+    font-size: 4rem !important;
+    height: 7rem !important;
+  }
+  .navbar-brand {
+    font-size: 3.6rem !important;
+  }
+  .box-title h1 {
+    font-size: 5rem !important;
+  }
+  .letsgo {
+    text-align: center;
+    font-size: 2.3rem !important;
+  }
+}

@@ -72,23 +72,7 @@ app.post("/signup",async(req,res )=>{
 });
 
 
-// app.get("/signup/home",(req,res)=>{
-//     const token = req.cookies.token;
-//     if (!token) {
-//         return res.redirect('/signup');
-//         }
-//         try {
-//         const decoded = jwt.verify(token, secret);
-//         req.userId = decoded.userId;
-//         res.redirect('/login/home');
-        
-//         } catch (err) {
-//         return res.redirect('/signup');
-//         }
 
-    
-   
-// })
 app.get("/login",(req,res)=>{
 
     res.render("login");
@@ -153,12 +137,12 @@ app.post("/login", async (req, res) => {
     if (user && user.route_id) {
       // Fetch route details if the user is registered for a route
       route = await routes.findById(user.route_id);
-      console.log('Fetched route details:', route);
+      // console.log('Fetched route details:', route);
     } else {
       console.log('User does not have a registered route.');
     }``
       
-      console.log(route);
+      // console.log(route);
       res.render("home", {
         
         user,
@@ -183,7 +167,7 @@ app.get("/home/profile",verifyToken,preventCache,async(req,res)=>{
 app.get("/register/:id",verifyToken,preventCache,async(req,res)=>{
     const { id } = req.params;
     const loggedInUserId = req.userId; // Get the logged in user's ID
-    console.log(loggedInUserId);
+    // console.log(loggedInUserId);
     const user = await User.findById(loggedInUserId);
     const foundRoute = await routes.findById(id);
 res.render("register",{foundRoute,user});
@@ -220,7 +204,7 @@ app.post("/register/:id", verifyToken, async (req, res) => {
 
       // Save the registration
       await newRegisteredRoute.save();
-      console.log(`User ${userId} registered to Route ${route_id} at Stop ${stopname}`);
+      // console.log(`User ${userId} registered to Route ${route_id} at Stop ${stopname}`);
       await User.findByIdAndUpdate(userId, { route_id: route_id, stop: stopname });
 
       // Redirect to the user's home page after successful registration
@@ -236,8 +220,16 @@ app.get("/adminlogin",(req,res)=>{
 
 })
 app.post("/adminlogin",(req,res )=>{
+    const { email, password } = req.body;
+    if (email === "" || password === "") {
+        return res.send("Please enter all the fields");  // Return after sending the response
+      }
+      else if(email===process.env.email  && password===process.env.password){
     // console.log("data saved")   
-    res.redirect("/adminlogin/adminhome")
+    res.redirect("/adminlogin/adminhome")}
+    else{
+       return res.send("Invalid Credentials")
+    }
 })
 app.post("/add-route",(req,res )=>{
     const { route_name, bus_number, departure, source, destination, driver_name, driver_contact, stop_name, arrival_time } = req.body;
@@ -269,7 +261,7 @@ app.post("/add-route",(req,res )=>{
       console.error('Error adding route:', err);
       res.status(500).send('Internal Server Error');
     });
-    console.log(req.body)   
+    // console.log(req.body)   
     res.redirect("/adminlogin/adminhome")
 })
 app.get("/adminlogin/adminhome",(req,res)=>{
