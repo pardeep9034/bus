@@ -3,6 +3,7 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+  
 }
 body {
   background-image: url(./back2.jpg);
@@ -72,7 +73,7 @@ body {
 }
 
 .header h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   width: 40%;
   text-align: center;
@@ -102,9 +103,51 @@ button {
 button:hover {
   background-color: rgb(46, 7, 63);
 }
+@media (max-width: 575.98px) {
+    .body {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    .navbar {
+      font-size: 2rem;
+      height: 4rem;
+    }
+    .buttons {
+     
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      font-size: 1.1rem;
+      height: 1.7rem;
+      width: 5.5rem;
+    }
+    .header {
+      margin-top: 1rem;
+    }
+  
+    .header h1 {
+      font-size: 2.5rem;
+      width: 80%;
+      margin-bottom: 1rem;
+    }
+    .header p {
+      text-align: center;
+      font-size: .9rem;
+      width: 80%;
+    }
+    button {
+      padding: .8rem 1.3rem;
+      font-size: 1.1rem;
+    }
+  }
+  
 @media (min-width: 576px) and (max-width: 767.98px) {
   .navbar {
-    font-size: 1.8rem;
+   
+    font-size: 3rem;
     height: 4rem;
   }
   .btn {
@@ -113,11 +156,12 @@ button:hover {
     width: 6rem;
   }
   .header {
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
   .header h1 {
     font-size: 3rem;
     width: 60%;
+    margin-bottom: 1rem;
   }
   .header p {
     font-size: 1.2rem;
@@ -129,21 +173,22 @@ button:hover {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .navbar {
-    font-size: 2.2rem;
+  
+    font-size: 3rem;
     height: 4.1rem;
   }
   .btn {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     height: 2.1rem;
     width: 6.2rem;
   }
   .header {
-    margin-top: 5rem;
+    margin-top: 0rem
   }
   .header h1 {
     font-size: 3.7rem;
-
-    width: 60%;
+    margin-bottom: 1rem;
+    width: 70%;
   }
   .header p {
     font-size: 1.3rem;
@@ -155,20 +200,26 @@ button:hover {
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .navbar {
-    font-size: 2.5rem;
+    font-size: 3rem;
     height: 4.5rem;
   }
 
   .header {
-    margin-top: 3rem;
+    margin-top: 0rem;
   }
   .header h1 {
-    font-size: 4rem;
-    width: 60%;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    width: 40%;
   }
   .header p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
+    button {
+        padding: .9rem 1.5rem;
+        font-size: 1.3rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -193,44 +244,5 @@ button:hover {
   }
   button {
     font-size: 1.8rem;
-  }
-}
-@media (max-width: 575.98px) {
-  .body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  .navbar {
-    font-size: 1.5rem;
-    height: 4rem;
-  }
-  .buttons {
-    display: flex;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
-  .btn {
-    font-size: 1rem;
-    height: 1.5rem;
-    width: 5rem;
-  }
-  .header {
-    margin-top: 5rem;
-  }
-
-  .header h1 {
-    font-size: 2.5rem;
-    width: 80%;
-  }
-  .header p {
-    text-align: center;
-    font-size: 1rem;
-    width: 80%;
-  }
-  button {
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
   }
 }
