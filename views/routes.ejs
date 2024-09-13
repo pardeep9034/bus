@@ -33,7 +33,7 @@
                   data-from="<%= route.source %>"
                   data-to="<%= route.destination %>"
                   data-bus-number="<%= route.bus_number %>"
-                  data-driver="<%= route.driver %>"
+                  data-driver="<%= route.driver_name %>"
                   data-driver-contact="<%= route.driver_contact %>"
                   data-stops='<%= JSON.stringify(route.stops.map(stop => ({
                     name: stop.stop_name,

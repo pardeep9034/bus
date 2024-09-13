@@ -228,6 +228,7 @@ app.post("/adminlogin",(req,res )=>{
     // console.log("data saved")   
     res.redirect("/adminlogin/adminhome")}
     else{
+     
        return res.send("Invalid Credentials")
     }
 })

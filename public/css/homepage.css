@@ -162,7 +162,11 @@ body {
   .navbar-toggler {
     position: absolute !important;  
     right: 0px !important;
+    
 
+  }
+  .ham{
+    
   }
   .navbar-toggler-icon ::after {
     background-color: white !important;
