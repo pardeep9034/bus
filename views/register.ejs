@@ -10,7 +10,7 @@
 <body>
 <div class="container mt-5">
     <h2 class="text-center">Register for a Bus Route</h2>
-    <form id="routeRegistrationForm" action="/register/<%=foundRoute._id%>" method="POST" novalidate class="mt-4 needs-validation" >
+    <form id="routeRegistrationForm" action="/home/routes/register/<%=foundRoute._id%>" method="POST" novalidate class="mt-4 needs-validation" >
 
         <input type="hidden" name="route_id" value="<%=foundRoute._id%>">
         <!-- Name Field -->
