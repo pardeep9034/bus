@@ -3,16 +3,42 @@ const app=express();
 const path=require('path');
 const ejsmate=require('ejs-mate');
 const mongoose=require('mongoose');
-const registeredRoute=require('./models/registeredroute');
-const routes=require('./models/routes');
-const User=require('./models/signup');
-const verifyToken = require('./utils/verifyToken');
-const preventCache = require('./utils/preventCache');
+const session = require('express-session');
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const flash = require('connect-flash');
+const User = require('./models/user');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 
 
+const sessionOptions = {
+  secret: process.env.SECRET || "thisisnotasecret", // Better to use an env variable for production
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    httpOnly: true,
+    expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+    maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
+  },
+};
+app.use(session(sessionOptions));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash())
+
+app.use((req, res, next) => {
+  res.locals.success = req.flash("success");
+  res.locals.error = req.flash("error");
+  res.locals.currentUser = req.user
+  next();
+});
+
+// Passport Configuration
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 app.use(express.json());
 app.use(cookieParser());
@@ -36,14 +62,20 @@ main()
 async function main(){
     await mongoose.connect(process.env.MONGO_URI);}
 app.get('/',(req,res)=>{
-    // res.send('Hello World');
-    res.render('index');
+ 
+
+    res.render('./landingpage/index');
 });
 
-app.use("/signup",require('./routes/signup'));
-app.use("/app",require('./routes/login'));
-app.use("/home",require('./routes/home'));
-app.use("/admin",require('./routes/admin'));
+app.use("/signup",require('./routes/signupRoutes'));
+app.use("/app",require('./routes/loginRoutes'));
+app.use("/home",require('./routes/homeRoutes'));
+app.use("/admin",require('./routes/adminRoutes'));
+
+app.use((err, req, res, next) => {
+  let { statusCode = 500, message = "Something went wrong" } = err;
+  res.status(statusCode).send(message);
+});
 
 app.listen(3000,()=>{
     console.log('Server is running on port 3000');

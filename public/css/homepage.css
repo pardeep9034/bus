@@ -3,24 +3,26 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(122, 28, 172, 0.5) !important; /* Purple overlay */
-  text-transform: capitalize;
   font-family: "Poppins", sans-serif !important;
+  text-transform: capitalize;
 }
 
 .navbar {
-  font-family: "popins", sans-serif;
+  font-family: "Poppins", sans-serif;
   height: 6rem !important;
   background-color: #7a1cac !important;
 }
+
+
 .navbar-brand {
   font-size: 2.6rem !important;
   font-weight: 600 !important;
   color: rgb(235, 211, 248) !important;
   margin-left: 20px !important;
 }
+
 .navbar-nav a {
-  padding-right: 15px !important;
-  margin-left: 10px;
+ 
   color: rgb(235, 211, 248) !important;
 }
 
@@ -29,33 +31,39 @@ body {
   display: grid !important;
   grid-template-columns: 5fr 2fr;
 }
+
 .btn {
+
   font-size: 1rem !important;
   font-weight: 500 !important;
-  padding: 0px 10px !important;
-  margin-left: 5px !important;
+  /* width: 100px !important; */
+  
+  /* padding: 0px 10px !important; */
+  /* margin-left: 5px !important; */
   background-color: rgb(235, 211, 248) !important;
-
-  border-radius: 20px !important;
-
   color: #7a1cac !important;
   border: 2px solid rgb(235, 211, 248) !important;
+  border-radius: 20px !important;
 }
+
 .btn a {
   text-decoration: none !important;
   color: #7a1cac !important;
   font-weight: 600 !important;
 }
-.btn:hover {
-  background-color: transparent !important;
-  a {
-    color: rgb(235, 211, 248) !important;
-  }
+.btn a:hover {
+  color: rgb(235, 211, 248) !important;
 }
+
+.btn:hover {
+  
+  background-color: transparent !important;
+  color: rgb(235, 211, 248) !important;
+}
+
 .box {
   display: grid;
-  grid-template-columns: 1fr 1fr !important;
-
+  grid-template-columns: 1fr 1fr;
   padding: 30px 30px;
   height: 100vh;
 }
@@ -64,7 +72,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0px !important;
+  margin: 30px 0px;
 }
 
 .box-image img {
@@ -72,27 +80,24 @@ body {
   height: auto !important;
   border-radius: 30px;
   margin-left: 40px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
 }
 
 .box-image img:hover {
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
 }
+
 .box-title {
   padding-top: 60px !important;
   padding-left: 30px !important;
 }
+
 .box-title h1 {
   font-family: "Poppins", sans-serif !important;
   font-size: 3.3rem !important;
   font-weight: 700 !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-.letsgo {
-  margin-top: 40px;
-  padding: 0px 30px !important;
-  font-size: 1.8rem !important;
 }
 
 .container {
@@ -100,20 +105,21 @@ body {
   grid-template-areas:
     "welcome welcome bus-pass"
     "details details bus-pass"
-    " not not not";
+    "not not not";
   padding: 30px 30px;
-
-  grid-gap: 20px; /* Adds space between grid items */
+  gap: 20px;
 }
 
 .welcome {
   grid-area: welcome;
-  font-weight: 600 !important;
-  font-size: 2rem !important;
+  padding: 20px 30px;
   text-align: center;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
   background-color: rgb(235, 244, 246);
   color: rgb(7, 25, 82);
 }
+
 .welcome h1 {
   font-size: 2.5rem !important;
   font-weight: 800 !important;
@@ -124,172 +130,130 @@ body {
   background-color: rgb(235, 244, 246);
   color: rgba(0, 0, 0);
 }
+
 .route {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(238, 238, 238);
 }
+
 .route h2 {
   font-size: 2.5rem !important;
   font-weight: 600 !important;
-  padding: 10px 0px !important;
-  margin-left: 30px !important;
-  word-spacing: 20px !important;
+  margin-left: 30px;
 }
+
 .route-details {
-  padding: 20px 30px !important;
+  padding: 20px 30px;
   font-size: 1.5rem !important;
   font-weight: 700 !important;
-  color: rgb(220, 95, 0) !important;
+  color: rgb(220, 95, 0);
 }
+
 .route-details strong {
   color: rgb(7, 25, 82) !important;
 }
 
 .notification {
-  grid-area: not !important;
+  grid-area: not;
 }
 
+/* Media Queries */
 @media (max-width: 575.98px) {
-  .navbar-brand {
-    font-size: 2.2rem !important;
-  }
-  .navbar-nav {
-    background-color: black;
-  }
-  .nav-box {
-    width: 100% !important;
-  }
-
-  .navbar-toggler {
-    position: absolute !important;  
-    right: 0px !important;
-    
-
-  }
-  .ham{
-    
-  }
-  .navbar-toggler-icon ::after {
-    background-color: white !important;
-  }
-
-  .navbar-nav a {
-    font-size: 1rem !important;
-  }
-  .box-title h1 {
-    font-size: 2.5rem !important;
+  .container {
+    grid-template-areas:
+      "welcome"
+      "details"
+      "bus-pass"
+      "not";
   }
 
   .box {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
+
   .box-image {
     display: none;
   }
+
   .box-title {
-    padding-left: 0px !important;
+    padding-left: 0;
+  }
+
+  .navbar {
+    height: 5rem;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
+  }
+
+  .route h2 {
+    font-size: 1.5rem !important;
+    margin-left: 0;
   }
 }
-@media (min-width: 576px) and (max-width: 799px) {
-  .navbar {
-    
-    font-size: 3.2rem !important;
-    height: 5rem !important;
-  }
-  .navbar-brand {
-    font-size: 2.6rem !important;
-  }
-  .navbar-nav a {
-    margin-left: 4px;
-  }
-  .navbar-nav .btn {
-    padding: 0px !important;
-    margin-left: 0px !important;
 
-    font-size: 1rem !important;
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  .container {
+    grid-template-areas:
+      "welcome welcome bus-pass"
+      "details details bus-pass"
+      "not not not";
   }
-  .box-title {
-    padding-top: 0% !important;
+
+  .navbar {
+    height: 5rem;
+  }
+  .navbar-nav{
+    /* background-color: black; */
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .btn-success {
     width: 100% !important;
+    font-size: 0.8rem !important;
+    padding: 0px 10px !important;
+    margin-left: 5px !important;
   }
-
-  .box-title h1 {
-    font-size: 2.1rem !important;
-  }
-  .box {
-    justify-items: center;
-    align-items: center;
-  }
-  .letsgo {
-    text-align: center;
-    font-size: 1.4rem !important;
-  }
-}
-@media (min-width: 800px) and (max-width: 991.98px) {
-  .navbar {
-    font-size: 3.2rem !important;
-    height: 5rem !important;
-  }
-  .navbar-brand {
-    font-size: 2.6rem !important;
-  }
-  .navbar-nav .btn {
-    padding: 0px !important;
-    margin-left: 0px !important;
+  .btn {
     width: 100px !important;
+    font-size: 0.8rem !important;
+    padding: 0px 10px !important;
+    margin-left: 5px !important;
+  }
 
-    font-size: 1rem !important;
-  }
-  .box-title h1 {
-    font-size: 2.6rem !important;
-  }
-  .box {
-    justify-items: center;
-    align-items: center;
-  }
-  .letsgo {
+
+  .box-title {
+    padding-top: 0;
     text-align: center;
-    font-size: 1.5rem !important;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .navbar {
-    font-size: 3.2rem !important;
-    height: 5rem !important;
-  }
-  .navbar-brand {
-    font-size: 2.6rem !important;
-  }
-
-  .navbar-nav .btn {
-    padding: 0px !important;
-    margin-left: 0px !important;
-    width: 100px !important;
-
-    font-size: 1rem !important;
-  }
-  .box-title h1 {
-    font-size: 2.6rem !important;
-  }
-
-  .letsgo {
-    text-align: center;
-    font-size: 1.5rem !important;
-  }
-}
 @media (min-width: 1200px) {
   .navbar {
-    font-size: 4rem !important;
-    height: 7rem !important;
+    height: 7rem;
   }
-  .navbar-brand {
-    font-size: 3.6rem !important;
+  .navbar-nav{
+    /* background-color: black; */
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
   }
+  .btn {
+    font-size: 1rem !important;
+    padding: 0px 10px !important;
+    margin-left: 5px !important;
+  }
+
+
   .box-title h1 {
-    font-size: 5rem !important;
-  }
-  .letsgo {
-    text-align: center;
-    font-size: 2.3rem !important;
+    font-size: 5rem;
   }
 }

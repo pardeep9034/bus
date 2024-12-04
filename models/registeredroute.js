@@ -3,13 +3,15 @@ const Schema = mongoose.Schema;
 
 const registeredRouteSchema = new Schema({
     route_id: {
-        type:String,
-        default:null,
+    type: Schema.Types.ObjectId,
+    ref: 'Route', // Reference to the Route model
+    default: null,
 
     },
     user_id: {
-        type:String,
-        default:null,
+        type: Schema.Types.ObjectId,
+        ref: 'User', // Reference to the User model
+        default: null,
     },
     stop_name: {
         type: String,
